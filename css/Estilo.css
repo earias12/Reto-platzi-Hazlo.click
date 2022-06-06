@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body{
+
+   font-family:Lobster;
+   color: #ffff;
+   margin: 15;
+   
+
+}
+
+.productos{
+
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+}
+
+.titulo{
+
+    color: #3F888F;
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 60px;
+
+
+}
+
+
+header{
+
+    width: 100%;
+    height: 1080px;
+
+
+background: #4ECDC4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #55627059, #39bbb2de);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #55627063, #4ecdc55e), url(../imagen/logo\ aplication.png); 
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: cover;
+background-attachment: fixed;
+position: relative;
+
+
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+
+}
+
+
+nav > a{
+    font-family: Lobster;
+
+    color: rgb(15, 3, 70);
+    font-weight: 300;
+
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover{
+
+    text-decoration: underline;
+
+}
+
+.waver{
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
