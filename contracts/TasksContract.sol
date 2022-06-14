@@ -7,13 +7,14 @@ contract TasksContract {
     uint public taskCounter = 0;
 
     constructor(){
-        createTask("tarea por defecto", "sin comentarios");
+        createTask("tarea por defecto", "sin comentarios","0.003");
     }
 
     event TaskCreated(
         uint id,
         string title,
         string description,
+        string amount,
         bool done,
         uint createdAt
     );
@@ -25,6 +26,7 @@ contract TasksContract {
         uint id;
         string title;
         string description;
+        string amount;
         bool done;
         uint256 createdAt; //porque no fecha porque Solidity usa timestap
     }
@@ -39,11 +41,11 @@ contract TasksContract {
     la podre llamar fuera de la blockchain. */
     
     // Estos serian los metodos
-    function createTask(string memory _title,string memory _description) public {
+    function createTask(string memory _title, string memory _description, string memory _amount) public {
         // Introducimos la tarea en la funcion
         taskCounter++;
-        tasks[taskCounter] = Task(taskCounter, _title, _description, false, block.timestamp);
-        emit TaskCreated(taskCounter, _title, _description, false, block.timestamp);
+        tasks[taskCounter] = Task(taskCounter, _title, _description, _amount, false, block.timestamp);
+        emit TaskCreated(taskCounter, _title, _description, _amount, false, block.timestamp);
     }
 
     function toggleDone(uint _id) public {
